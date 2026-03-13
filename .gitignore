@@ -25,7 +25,7 @@
 # Local vault settings
 .obsidian/workspace.json
 .obsidian/plugins/*/data.json
-.obsidian/plugins/*/workspace.json
+**/workspace.json
 
 # Trash / sync / temp
 .obsidian/.trash/
