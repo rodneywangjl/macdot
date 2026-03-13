@@ -32,3 +32,5 @@
 .obsidian/.sync/
 *.log
 *.tmp
+
+**/.DS_STORE
