@@ -5,22 +5,20 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       diagnostics = { virtual_text = { prefix = "icons" } },
-      capabilities = {
-        workspace = {
-          didChangeWatchedFiles = {
-            dynamicRegistration = false,
+      servers = {
+        ["*"] = {
+          capabilities = {
+            workspace = {
+              didChangeWatchedFiles = {
+                dynamicRegistration = false,
+              },
+            },
           },
         },
-      },
-      servers = {
         lua_ls = {
-          -- cmd = { "/home/projects/lua-language-server/bin/lua-language-server" },
-          -- single_file_support = true,
           settings = {
             Lua = {
-              misc = {
-                -- parameters = { "--loglevel=trace" },
-              },
+              misc = {},
               hover = { expandAlias = false },
               type = {
                 castNumberToInteger = true,
@@ -28,7 +26,6 @@ return {
               },
               diagnostics = {
                 disable = { "incomplete-signature-doc", "trailing-space" },
-                -- enable = false,
                 groupSeverity = {
                   strong = "Warning",
                   strict = "Warning",
@@ -55,7 +52,6 @@ return {
       },
     },
   },
-
   {
     "stevearc/conform.nvim",
     optional = true,
