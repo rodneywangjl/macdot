@@ -44,3 +44,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Brew python
 export PATH="$(brew --prefix)/bin:$PATH"
+#
+# System Python
+# export PATH="/usr/bin:$PATH"
