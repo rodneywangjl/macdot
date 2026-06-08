@@ -43,7 +43,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Brew python
-export PATH="$(brew --prefix)/bin:$PATH"
+# export PATH="$(brew --prefix)/bin:$PATH"
 #
 # System Python
-# export PATH="/usr/bin:$PATH"
+export PATH="/usr/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
