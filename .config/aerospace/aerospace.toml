@@ -9,7 +9,7 @@ start-at-login = true
 # Mirrors Omarchy's autostart.lua (browser, then terminal after a short delay)
 after-startup-command = [
     'exec-and-forget open -na "Google Chrome"',
-    'exec-and-forget sh -c "sleep 2.5 && open -na Ghostty"',
+    'exec-and-forget sh -c "sleep 7 && open -na Ghostty"',
     'workspace 1'
 ]
 
