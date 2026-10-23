@@ -2,19 +2,15 @@ return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
-    -- Customize theme specs, e.g: disable italic. For full spec: https://github.com/rose-pine/neovim
-    -- config = function()
-    -- require("rose-pine").setup({
-    --  styles = {
-    --    italic = false,
-    --  },
-    -- })
-    -- end,
-  },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "rose-pine",
-    },
+    config = function()
+      require("rose-pine").setup({
+        disable_background = true,
+      })
+
+      vim.cmd.colorscheme("rose-pine")
+
+      vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+      vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    end,
   },
 }
