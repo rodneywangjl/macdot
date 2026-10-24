@@ -115,6 +115,7 @@ alt-o = 'exec-and-forget open -n /Applications/Obsidian.app'
 alt-m = 'exec-and-forget open -n /Applications/Spotify.app'
 alt-n = 'exec-and-forget open -na Ghostty --args -e nvim'
 alt-s = 'exec-and-forget open -na Ghostty --args -e opencode'
+alt-shift-s = 'exec-and-forget open -na Ghostty --args -e claude'
 
 # ---- Webapps ----
 alt-a = 'exec-and-forget open -na "Google Chrome" --args --app="https://chatgpt.com"'
