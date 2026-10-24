@@ -1,0 +1,553 @@
+/*
+ * Rosé Pine (main) for Obsidian
+ *
+ * Palette and highlight groups match rose-pine/neovim with the "main"
+ * variant (rose-pine-main), which is what the Neovim config uses for
+ * dark backgrounds.
+ */
+
+:root
+{
+    /* Rosé Pine main palette */
+    --rp-base:             #191724;
+    --rp-base-rgb:         25, 23, 36;
+    --rp-surface:          #1f1d2e;
+    --rp-surface-rgb:      31, 29, 46;
+    --rp-overlay:          #26233a;
+    --rp-overlay-rgb:      38, 35, 58;
+    --rp-muted:            #6e6a86;
+    --rp-muted-rgb:        110, 106, 134;
+    --rp-subtle:           #908caa;
+    --rp-subtle-rgb:       144, 140, 170;
+    --rp-text:             #e0def4;
+    --rp-text-rgb:         224, 222, 244;
+    --rp-love:             #eb6f92;
+    --rp-love-rgb:         235, 111, 146;
+    --rp-gold:             #f6c177;
+    --rp-gold-rgb:         246, 193, 119;
+    --rp-rose:             #ebbcba;
+    --rp-rose-rgb:         235, 188, 186;
+    --rp-pine:             #31748f;
+    --rp-pine-rgb:         49, 116, 143;
+    --rp-foam:             #9ccfd8;
+    --rp-foam-rgb:         156, 207, 216;
+    --rp-iris:             #c4a7e7;
+    --rp-iris-rgb:         196, 167, 231;
+    --rp-leaf:             #95b1ac;
+    --rp-leaf-rgb:         149, 177, 172;
+
+    --rp-highlight-low:    #21202e;
+    --rp-highlight-med:    #403d52;
+    --rp-highlight-high:   #524f67;
+}
+
+body
+{
+    --accent-h: 267; /* iris #c4a7e7 */
+    --accent-s: 57%;
+    --accent-l: 78%;
+
+    --link-color:                    var(--rp-iris);
+    --link-color-hover:              var(--rp-rose);
+    --link-decoration:               underline;
+    --link-decoration-hover:         underline;
+    --link-external-decoration:      underline;
+    --link-external-decoration-hover: underline;
+
+    --tag-decoration:                 none;
+    --tag-decoration-hover:           underline;
+    --tag-padding-x:                  .5em;
+    --tag-padding-y:                  .2em;
+    --tag-radius:                     .5em;
+
+    --tab-font-weight:                600;
+    --bold-weight:                    600;
+
+    --checkbox-radius:                0;
+
+    /* --list-indent:                    2em; */
+
+    --embed-border-left: 6px double var(--rp-iris);
+}
+
+.theme-dark
+{
+    --color-red-rgb:                 var(--rp-love-rgb);
+    --color-red:                     var(--rp-love);
+    --color-orange-rgb:              var(--rp-rose-rgb);
+    --color-orange:                  var(--rp-rose);
+    --color-yellow-rgb:              var(--rp-gold-rgb);
+    --color-yellow:                  var(--rp-gold);
+    --color-green-rgb:               var(--rp-leaf-rgb);
+    --color-green:                   var(--rp-leaf);
+    --color-cyan-rgb:                var(--rp-foam-rgb);
+    --color-cyan:                    var(--rp-foam);
+    --color-blue-rgb:                var(--rp-pine-rgb);
+    --color-blue:                    var(--rp-pine);
+    --color-purple-rgb:              var(--rp-iris-rgb);
+    --color-purple:                  var(--rp-iris);
+    --color-pink-rgb:                var(--rp-rose-rgb);
+    --color-pink:                    var(--rp-rose);
+
+    --background-primary:            var(--rp-base);
+    --background-primary-alt:        var(--rp-base);
+    --background-secondary:          var(--rp-surface);
+    --background-secondary-alt:      var(--rp-overlay);
+    --background-modifier-border:    var(--rp-overlay);
+    --background-modifier-border-hover: var(--rp-highlight-med);
+    --background-modifier-border-focus: var(--rp-highlight-high);
+    --background-modifier-hover:     var(--rp-overlay);
+    --background-modifier-active-hover: var(--rp-highlight-med);
+    --background-modifier-form-field: var(--rp-surface);
+    --background-modifier-form-field-highlighted: var(--rp-overlay);
+    --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+    --background-modifier-cover:     rgba(var(--rp-base-rgb), 0.8);
+    --background-modifier-success:   var(--rp-leaf);
+    --background-modifier-error:     var(--rp-love);
+    --background-modifier-error-hover: var(--rp-love);
+
+    --cursor-line-background:        var(--rp-overlay);
+
+    --text-normal:                   var(--rp-text);
+    --text-faint:                    var(--rp-muted);
+    --text-muted:                    var(--rp-subtle);
+    --text-error:                    var(--rp-love);
+    --text-error-hover:              var(--rp-love);
+    --text-success:                  var(--rp-leaf);
+    --text-warning:                  var(--rp-gold);
+    --text-on-accent:                var(--rp-base);
+    --text-on-accent-inverted:       var(--rp-text);
+
+    --h1-color:                      var(--rp-iris);
+    --h2-color:                      var(--rp-foam);
+    --h3-color:                      var(--rp-rose);
+    --h4-color:                      var(--rp-gold);
+    --h5-color:                      var(--rp-pine);
+    --h6-color:                      var(--rp-leaf);
+
+    --text-highlight-bg:             rgba(var(--rp-gold-rgb), 0.3);
+    --text-highlight-fg:             var(--rp-text);
+
+    --text-accent:                   var(--rp-iris);
+    --text-accent-hover:             var(--rp-rose);
+
+    --interactive-accent:            var(--rp-iris);
+    --interactive-accent-hover:      var(--rp-rose);
+    --interactive-accent-active:     var(--rp-iris);
+
+    --tag-color:                     var(--rp-iris);
+    --tag-background:                var(--rp-overlay);
+    --tag-background-hover:          var(--rp-surface);
+    --tag-border-color:              var(--rp-highlight-med);
+
+    --titlebar-text-color:           var(--rp-subtle);
+    --titlebar-text-color-focused:   var(--rp-text);
+    --titlebar-background:           var(--rp-base);
+    --titlebar-background-focused:   var(--rp-surface);
+
+    --inline-title-color:            var(--rp-iris);
+
+    --bold-color:                    var(--rp-text);
+    --italic-color:                  var(--rp-text);
+
+    --checkbox-color:                var(--rp-foam);
+    --checkbox-color-hover:          var(--rp-rose);
+    --checkbox-border-color:         var(--rp-subtle);
+    --checkbox-border-color-hover:   var(--rp-rose);
+    --checklist-done-color:          rgba(var(--rp-text-rgb), 0.5);
+    --checklist-done-decoration:     line-through;
+
+    --list-marker-color:             var(--rp-pine);
+    --list-marker-color-hover:       var(--rp-rose);
+    --list-marker-color-collapsed:   var(--rp-subtle);
+    --list-numbered-color:           var(--rp-pine);
+
+    --table-header-background:       var(--rp-overlay);
+    --table-header-background-hover: var(--rp-highlight-med);
+    --table-row-even-background:     rgba(var(--rp-overlay-rgb), 0.5);
+    --table-row-odd-background:      transparent;
+    --table-row-background-hover:    var(--rp-overlay);
+
+    --text-selection:                rgba(var(--rp-iris-rgb), 0.3);
+    --flashing-background:           rgba(var(--rp-love-rgb), 0.3);
+
+    /* Code blocks and syntax highlight groups from the Neovim theme */
+    --code-normal:                   var(--rp-text);
+    --code-background:               var(--rp-overlay);
+    --code-comment:                  var(--rp-subtle);
+    --code-function:                 var(--rp-rose);
+    --code-important:                var(--rp-love);
+    --code-keyword:                  var(--rp-pine);
+    --code-operator:                 var(--rp-subtle);
+    --code-property:                 var(--rp-foam);
+    --code-punctuation:              var(--rp-subtle);
+    --code-string:                   var(--rp-gold);
+    --code-tag:                      var(--rp-foam);
+    --code-value:                    var(--rp-gold);
+
+    --mermaid-note:                  var(--rp-iris);
+    --mermaid-loopline:              var(--rp-foam);
+
+    --icon-color:                    var(--rp-subtle);
+    --icon-color-hover:              var(--rp-text);
+    --icon-color-focused:            var(--rp-iris);
+    --icon-color-active:             var(--rp-text);
+
+    --nav-item-color:                var(--rp-subtle);
+    --nav-item-color-hover:          var(--rp-text);
+    --nav-item-color-active:         var(--rp-text);
+    --nav-item-color-selected:       var(--rp-text);
+    --nav-item-background-hover:     var(--rp-overlay);
+    --nav-item-background-active:    var(--rp-overlay);
+    --nav-item-background-selected:  rgba(var(--rp-iris-rgb), 0.2);
+    --nav-file-tag:                  rgba(var(--rp-gold-rgb), 0.9);
+
+    --graph-line:                    var(--rp-highlight-med);
+    --graph-node:                    var(--rp-subtle);
+    --graph-node-focused:            var(--rp-iris);
+    --graph-node-tag:                var(--rp-gold);
+    --graph-node-attachment:         var(--rp-rose);
+    --graph-node-unresolved:         var(--rp-highlight-high);
+
+    --calendar-hover:                var(--rp-rose);
+    --calendar-background-hover:     var(--rp-highlight-med);
+    --calendar-week:                 var(--rp-gold);
+    --calendar-today:                var(--rp-gold);
+
+    --dataview-key:                  var(--rp-subtle);
+    --dataview-key-background:       rgba(var(--rp-iris-rgb), 0.2);
+    --dataview-value:                var(--rp-text);
+    --dataview-value-background:     rgba(var(--rp-rose-rgb), 0.2);
+
+    --tab-text-color:                        var(--rp-subtle);
+    --tab-text-color-active:                 var(--rp-text);
+    --tab-text-color-focused:                var(--rp-subtle);
+    --tab-text-color-focused-active:         var(--rp-text);
+    --tab-text-color-focused-active-current: var(--rp-text);
+    --tab-text-color-focused-highlighted:    var(--rp-iris);
+    --tab-background-active:                 var(--rp-overlay);
+    --tab-outline-color:                     var(--rp-overlay);
+
+    --status-bar-background:         var(--rp-surface);
+    --status-bar-text-color:         var(--rp-subtle);
+    --status-bar-border-color:       var(--rp-overlay);
+
+    --ribbon-background:             var(--rp-surface);
+    --ribbon-background-collapsed:   var(--rp-surface);
+
+    --divider-color:                 var(--rp-overlay);
+    --divider-color-hover:           var(--rp-highlight-med);
+
+    --hr-color:                      var(--rp-highlight-med);
+    --blockquote-border-color:       var(--rp-love);
+    --blockquote-background-color:   transparent;
+
+    --scrollbar-bg:                  var(--rp-base);
+    --scrollbar-thumb-bg:            var(--rp-overlay);
+    --scrollbar-active-thumb-bg:     var(--rp-highlight-med);
+
+    --callout-default:               var(--rp-pine);
+    --callout-info:                  var(--rp-foam);
+    --callout-todo:                  var(--rp-pine);
+    --callout-success:               var(--rp-leaf);
+    --callout-summary:               var(--rp-foam);
+    --callout-important:             var(--rp-iris);
+    --callout-tip:                   var(--rp-foam);
+    --callout-question:              var(--rp-gold);
+    --callout-warning:               var(--rp-gold);
+    --callout-fail:                  var(--rp-love);
+    --callout-error:                 var(--rp-love);
+    --callout-bug:                   var(--rp-love);
+    --callout-example:               var(--rp-iris);
+    --callout-quote:                 var(--rp-rose);
+}
+
+table
+{
+    border: 1px solid var(--rp-surface) !important;
+    border-collapse: collapse;
+}
+
+thead
+{
+    border-bottom: 2px solid var(--background-modifier-border) !important;
+}
+
+th
+{
+    font-weight: 600 !important;
+    border: 1px solid var(--rp-surface) !important;
+}
+
+td
+{
+    border-left: 1px solid var(--rp-surface) !important;
+    border-right: 1px solid var(--rp-surface) !important;
+    border-bottom: 1px solid var(--rp-surface) !important;
+}
+
+.markdown-rendered tbody tr:nth-child(even)
+{
+    background-color: var(--table-row-even-background) !important;
+}
+
+.markdown-rendered tbody tr:nth-child(odd)
+{
+    background-color: var(--table-row-odd-background) !important;
+}
+
+.markdown-rendered tbody tr:nth-child(even):hover,
+.markdown-rendered tbody tr:nth-child(odd):hover
+{
+    background-color: var(--table-row-background-hover) !important;
+}
+
+.markdown-rendered mark
+{
+    background-color: var(--text-highlight-bg) !important;
+    color: var(--text-highlight-fg) !important;
+}
+
+.markdown-rendered mark a
+{
+    color: var(--rp-iris) !important;
+    font-weight: 600;
+}
+
+.search-result-file-matched-text
+{
+    color: var(--text-highlight-fg) !important;
+}
+
+.cm-hashtag-begin:hover, .cm-hashtag-end:hover
+{
+    color: var(--text-accent);
+    /* background-color: var(--tag-background-hover); */
+    text-decoration: underline;
+}
+
+input[type=checkbox]
+{
+    border: 1px solid var(--checkbox-color);
+}
+
+input[type=checkbox]:checked
+{
+    background-color: var(--checkbox-color);
+    box-shadow: inset 0 0 0 2px var(--background-primary);
+}
+
+input[type=checkbox]:checked:after
+{
+    display: none;
+}
+
+code[class*="language-"],
+pre[class*="language-"]
+{
+    line-height: var(--line-height-tight) !important;
+}
+
+/* Keep highlight/marks the same between viewer and editor. */
+.cm-highlight
+{
+    color: var(--text-highlight-fg) !important;
+}
+
+/* Keep inline code the same between viewer and editor. */
+.cm-inline-code
+{
+    border-radius: var(--radius-s);
+    font-size: var(--code-size);
+    padding: 0.1em 0.25em;
+}
+
+.cm-formatting-code + .cm-inline-code
+{
+    border-radius: 0;
+    padding: 0.1em 0;
+}
+
+.cm-formatting-code
+{
+    border-radius: var(--radius-s) 0 0 var(--radius-s);
+    padding: 0.1em 0 0.1em 0.25em;
+}
+
+.cm-inline-code + .cm-formatting-code
+{
+    border-radius: 0 var(--radius-s) var(--radius-s) 0;
+    padding: 0.1em 0.25em 0.1em 0;
+}
+
+/* Neovim's mkdCode: foam italic, with rose delimiters. */
+.markdown-rendered :not(pre) > code,
+.cm-s-obsidian span.cm-inline-code
+{
+    color: var(--rp-foam);
+    font-style: italic;
+}
+
+.cm-s-obsidian span.cm-formatting-code
+{
+    color: var(--rp-rose);
+}
+
+/* Neovim renders comments in italics. */
+.cm-s-obsidian span.cm-comment,
+.markdown-rendered pre code .token.comment,
+.markdown-rendered pre code .token.prolog,
+.markdown-rendered pre code .token.doctype,
+.markdown-rendered pre code .token.cdata
+{
+    color: var(--code-comment);
+    font-style: italic;
+}
+
+/* Keep list bullet padding the same between viewer and editor. */
+.cm-formatting-list
+{
+    padding-right: 4px !important;
+}
+
+/*
+ * Keep sub-list indenting the same between viewer and editor.
+ * This assumes --list-indent is default at 2em.
+ */
+/*
+.cm-indent 
+{
+    text-indent: 1em !important;
+}
+*/
+
+/*
+ * Markdown formatting characters in the editor map to Neovim's
+ * markdownDelimiter group.
+ */
+.cm-s-obsidian .cm-formatting,
+.cm-s-obsidian .cm-formatting-header,
+.cm-s-obsidian .cm-formatting-quote,
+.cm-s-obsidian .cm-formatting-link
+{
+    color: var(--rp-subtle);
+}
+
+/* Neovim colors list markers with @markup.list. */
+.cm-s-obsidian .cm-formatting-list
+{
+    color: var(--rp-pine);
+}
+
+/* Neovim links heading markers to their heading color. */
+.cm-s-obsidian .HyperMD-header-1 .cm-formatting-header
+{
+    color: var(--h1-color);
+}
+
+.cm-s-obsidian .HyperMD-header-2 .cm-formatting-header
+{
+    color: var(--h2-color);
+}
+
+.cm-s-obsidian .HyperMD-header-3 .cm-formatting-header
+{
+    color: var(--h3-color);
+}
+
+.cm-s-obsidian .HyperMD-header-4 .cm-formatting-header
+{
+    color: var(--h4-color);
+}
+
+.cm-s-obsidian .HyperMD-header-5 .cm-formatting-header
+{
+    color: var(--h5-color);
+}
+
+.cm-s-obsidian .HyperMD-header-6 .cm-formatting-header
+{
+    color: var(--h6-color);
+}
+
+/* Neovim's @markup.quote keeps normal text color. */
+.markdown-rendered blockquote,
+.markdown-source-view.mod-cm6 .HyperMD-quote
+{
+    color: var(--rp-text);
+}
+
+.mermaid .note
+{
+    fill: var(--mermaid-note) !important;
+}
+
+.calendar .week-num
+{
+    color: var(--calendar-week) !important;
+}
+
+.mermaid .loopLine
+{
+    stroke: var(--mermaid-loopline) !important;
+}
+
+.calendar .today
+{
+    color: var(--calendar-today) !important;
+}
+
+.calendar .week-num:hover,
+.calendar .day:hover
+{
+    color: var(--calendar-hover) !important;
+    background-color: var(--calendar-background-hover) !important;
+}
+
+.markdown-embed-title
+{
+    color: var(--rp-foam);
+    font-weight: 600 !important;
+}
+
+.cm-active
+{
+    background-color: var(--cursor-line-background) !important;
+}
+
+.nav-file-tag
+{
+    color: var(--nav-file-tag) !important;
+}
+
+.is-flashing
+{
+    background-color: var(--flashing-background) !important;
+}
+
+.dataview.inline-field-key
+{
+    border-top-left-radius: var(--radius-s);
+    border-bottom-left-radius: var(--radius-s);
+    padding-left: 4px;
+    font-family: var(--font-monospace);
+    font-size: var(--font-smaller);
+    color: var(--dataview-key) !important;
+    background-color: var(--dataview-key-background) !important;
+}
+
+.dataview.inline-field-value
+{
+    border-top-right-radius: var(--radius-s);
+    border-bottom-right-radius: var(--radius-s);
+    padding-right: 4px;
+    font-family: var(--font-monospace);
+    font-size: var(--font-smaller);
+    color: var(--dataview-value) !important;
+    background-color: var(--dataview-value-background) !important;
+}
+
+.suggestion-highlight
+{
+    color: var(--rp-iris);
+}
