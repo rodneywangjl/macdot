@@ -36,6 +36,9 @@ alias lst="eza --all --tree --level=2 --color=always --icons=always --no-user --
 alias grep='rg --smart-case --hidden'
 alias scrcpy='scrcpy --video-bit-rate 8M --max-size 1024 --max-fps 60'
 
+alias disablesleep='sudo pmset -a disablesleep 1'
+alias undosleep='sudo pmset -a disablesleep 0'
+
 alias scanleaks='gitleaks detect --source . -v'
 
 export NVM_DIR="$HOME/.nvm"
