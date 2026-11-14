@@ -27,6 +27,7 @@ keybind = control+insert=copy_to_clipboard
 
 # Macos
 macos-titlebar-style = hidden
+macos-secure-input-indication = false
 
 # SSH session terminfo
 shell-integration-features = ssh-env, no-cursor, no-title
